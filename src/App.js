@@ -4,7 +4,11 @@ import Profile from "./components/Profile";
 import { useAuth0 } from "@auth0/auth0-react";
 
 function App() {
-  const { isLoading, error } = useAuth0();
+  const { isLoading, error, isAuthenticated } = useAuth0();
+
+  console.log("isLoading:", isLoading);
+  console.log("error:", error);
+  console.log("isAuthenticated:", isAuthenticated);
 
   return (
     <main className="column">
